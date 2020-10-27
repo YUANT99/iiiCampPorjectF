@@ -68,7 +68,7 @@ public class PostUpdateAction extends HttpServlet {
 			PostBeanDAO pDAO = new PostBeanDAO(session);
 			List<Post> list = pDAO.select(postid);
 			request.setAttribute("list", list);
-			RequestDispatcher rd = request.getRequestDispatcher("/AdminLTE-3.0.5/EditPost.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/AdminLTE-3.0.5/admin.blog.EditPost.jsp");
 			rd.forward(request, response);
 			
 }

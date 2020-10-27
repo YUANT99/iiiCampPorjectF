@@ -66,36 +66,7 @@ public class PostAddServletAction extends HttpServlet {
 		}
 	
 
-	private void processDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		SessionFactory factory = HibernateUtil.getSessionFactory();
-		Session session = factory.getCurrentSession();
-		
 
-		PostBeanDAO pDAO = new PostBeanDAO(session);
-		int postid=Integer.parseInt(request.getParameter("postid"));
-		try {
-			pDAO.delete(postid);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	
-	}
-
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-
-
-	
 
 
 }		
